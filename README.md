@@ -1,3 +1,6 @@
+# CHECK THE VIDEO HERE: 
+> https://www.youtube.com/watch?v=g-jZpG9zxQk
+
 # Movie Search + Favorites Application
 
 A full-stack application for searching movies and managing favorites, built with **Next.js 15 (App Router)** for the frontend and **NestJS (Hexagonal Architecture)** for the backend.
