@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Custom variant for dark mode with data-theme */
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Define CSS variables that change based on data-theme */
+@layer base {
+  :root {
+    /* Light mode - Blue/Gray theme */
+    --bg: #f8fafc;
+    --fg: #0f172a;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary: #64748b;
+    --accent: #3b82f6;
+    --border: #e2e8f0;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --muted: #cbd5e1;
+    --card: #ffffff;
+    --input: #ffffff;
+  }
+
+  [data-theme="dark"] {
+    /* Dark mode - Deep blue/slate tones */
+    --bg: #020617;
+    --fg: #f1f5f9;
+    --primary: #3b82f6;
+    --primary-hover: #60a5fa;
+    --secondary: #475569;
+    --accent: #60a5fa;
+    --border: #1e293b;
+    --success: #34d399;
+    --warning: #fbbf24;
+    --error: #f87171;
+    --muted: #334155;
+    --card: #0f172a;
+    --input: #1e293b;
+  }
+}
+
+/* Generate Tailwind utilities from CSS variables */
+@theme {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-input: var(--input);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
